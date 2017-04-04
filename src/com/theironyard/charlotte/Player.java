@@ -4,6 +4,7 @@ public class Player {
     String name;
     String weapon;
     String location;
+    ArrayList<String> items = new ArrayList();
 
     public void chooseName() {
         System.out.println("What is your name?");
@@ -40,4 +41,15 @@ public class Player {
             throw new Exception("Invalid location.");
         }
     }
+
+    public void findItems(String item) {
+        System.out.println(("You've just fond a ") + item + ". Do you want to pick it up? [y/n]");
+        String answer = Game.nextLine();
+        if (answer.equalsIgnoreCase("y"){
+            items.add(item);
+            system.out.println(("You've picked up a " + item ("!"));
+        }
+
+    }
+
 }
